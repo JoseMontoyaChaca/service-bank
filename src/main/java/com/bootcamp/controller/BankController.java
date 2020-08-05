@@ -23,7 +23,6 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/bank")
-//@Api(value = "bank", produces = "application/json")
 public class BankController {
 	
 	@Autowired
@@ -53,10 +52,7 @@ public class BankController {
 	
 	
 	//CRUD 
-	//@ApiOperation(value = "Get Banks", notes = "Returns all bank")
-	//@ApiResponses({
-	//     @ApiResponse(code = 200, message = "Answer correctly")
-	//})
+
 	@GetMapping("/findAllBank")
 	public Flux<Bank> findAll()		{return bankService.findAll();}
 	
